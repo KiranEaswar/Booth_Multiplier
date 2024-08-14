@@ -23,13 +23,13 @@ We need a total register that is double the size of the operand bits. For 5-bit 
 
 2. **Process Description**:
 
-| Step | `total`         | `qbit` | Action Description                                                               |
+| Step | `total`         | `qbit` | Action Description (total[0],qbit)                                               |
 |------|-----------------|--------|----------------------------------------------------------------------------------|
-| 0    | 00000 01011     | 0      | 10 : Upper 5 bits of total = total - a. Assign qbit to total[0] and shift right. |
+| 0    | 00000 01011     | 0      | 10 : Upper 5 bits of total = total - M. Assign qbit to total[0] and shift right. |
 | 1    | 11001 10101     | 1      | 11 : Assign qbit to be total[0] and shift right                                  |
-| 2    | 11100 11010     | 1      | 01 : Upper 5 bits of total = total + a. Assign qbit to total[0] and shift right. |
-| 3    | 00100 11101     | 0      | 10 : Upper 5 bits of total = total - a. Assign qbit to total[0] and shift right. |
-| 4    | 11011 11110     | 1      | 01 : Upper 5 bits of total = total + a. Assign qbit to total[0] and shift right. |
+| 2    | 11100 11010     | 1      | 01 : Upper 5 bits of total = total + M. Assign qbit to total[0] and shift right. |
+| 3    | 00100 11101     | 0      | 10 : Upper 5 bits of total = total - M. Assign qbit to total[0] and shift right. |
+| 4    | 11011 11110     | 1      | 01 : Upper 5 bits of total = total + M. Assign qbit to total[0] and shift right. |
 | 5    | 00100 01111     | x      | End Result (00100 01111 = 143 = 13 * 11)                                         |
 
 
